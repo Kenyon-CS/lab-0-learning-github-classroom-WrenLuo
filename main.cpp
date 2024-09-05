@@ -54,13 +54,16 @@ int main() {
   vector<string> anagrams = findAnagrams(word, filename);
 
   // Output the results
+  
   if (anagrams.empty()) {
     cout << "No anagrams found for the word '" << word << "' in the file."
          << endl;
   } else {
+    int n=1;
     cout << "Anagrams found for the word '" << word << "':" << endl;
     for (const string &anagram : anagrams) {
-      cout << anagram << endl;
+      cout << n << "." << anagram << endl;
+      n++;
     }
   }
 
